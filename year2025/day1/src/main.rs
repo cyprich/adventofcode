@@ -12,7 +12,7 @@ pub fn part1() {
     let mut pointing_at = 50;
     let mut result = 0;
 
-    let filename = "inputs/input1.txt";
+    let filename = "assets/input1.txt";
     let lines = fs::read_to_string(PathBuf::from(filename)).expect("Couln't read file");
 
     for line in lines.split("\n") {
@@ -50,7 +50,7 @@ pub fn part2() {
     let mut pointing_at = 50;
     let mut result = 0;
 
-    let filename = "inputs/input1.txt";
+    let filename = "assets/input1.txt";
     // let filename = "examples/example1.txt";
     let lines = fs::read_to_string(PathBuf::from(filename)).expect("Couln't read file");
 
@@ -84,19 +84,6 @@ pub fn part2() {
             }
             _ => println!("Couldn't parse line: {}", line),
         }
-
-        // while pointing_at >= 100 {
-        //     pointing_at -= 100;
-        //     result += 1;
-        // }
-        //
-        // while pointing_at < 0 {
-        //     pointing_at += 100;
-        //     result += 1;
-        // }
-
-        // println!("{}  \t{}  \t{}", line, pointing_at, result);
-        // sleep(Duration::from_secs(2));
     }
 
     println!("Pointing at: {}", pointing_at);
